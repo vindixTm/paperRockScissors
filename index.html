@@ -15,7 +15,37 @@
 			return(comChoice);
 			
 		}
-		getComputerChoice();
+
+		function game(playerSelection, computerSelection){
+			computerSelection = getComputerChoice();
+			playerChoice = playerSelection.toLowerCase();
+
+			if (computerSelection === 'rock' & playerChoice === 'paper') {
+				return(" You Won! Paper beats Rock");
+			}
+			else if (computerSelection === 'paper' & playerChoice === 'rock') {
+				return("Youn Lost! Paper beats Rock");
+			}
+			else if (computerSelection === 'rock' & playerChoice === 'scissors') {
+				return(" You Lost! Rock beats Scissors");
+			}
+			else if (computerSelection === 'scissors' & playerChoice === 'rock') {
+				return("Youn Won! Rock beats Scissors");
+			}
+			else if (computerSelection === 'scissors' & playerChoice === 'rock' ) {
+				return("Youn Won! Rock beats Scissors");
+			}
+			else if (computerSelection === 'paper' & playerChoice === 'scissors') {
+				return("You Won! Scissors beats paper");
+			}
+			else if (computerSelection === 'scissors' & playerChoice === 'paper') {
+				return("You Lost! Scissors beats paper.");
+			}
+			else(computerSelection === playerChoice)
+				return("It's a Draw!");
+		}
+
+		
 		
 	</script>
 
