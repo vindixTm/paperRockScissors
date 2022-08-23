@@ -7,7 +7,12 @@
 </head>
 <body>
 
+	
+
 	<script type="text/javascript">
+		
+ // GETTING INPUTS FORM COMPUTER AND PLAYER
+
 
 		function getComputerChoice(){
 			let Choices = ['rock', 'paper', 'scissors'];
@@ -16,35 +21,106 @@
 			
 		}
 
-		function game(playerSelection, computerSelection){
-			computerSelection = getComputerChoice();
-			playerChoice = playerSelection.toLowerCase();
-
-			if (computerSelection === 'rock' & playerChoice === 'paper') {
-				return(" You Won! Paper beats Rock");
-			}
-			else if (computerSelection === 'paper' & playerChoice === 'rock') {
-				return("Youn Lost! Paper beats Rock");
-			}
-			else if (computerSelection === 'rock' & playerChoice === 'scissors') {
-				return(" You Lost! Rock beats Scissors");
-			}
-			else if (computerSelection === 'scissors' & playerChoice === 'rock') {
-				return("Youn Won! Rock beats Scissors");
-			}
-			else if (computerSelection === 'scissors' & playerChoice === 'rock' ) {
-				return("Youn Won! Rock beats Scissors");
-			}
-			else if (computerSelection === 'paper' & playerChoice === 'scissors') {
-				return("You Won! Scissors beats paper");
-			}
-			else if (computerSelection === 'scissors' & playerChoice === 'paper') {
-				return("You Lost! Scissors beats paper.");
-			}
-			else(computerSelection === playerChoice)
-				return("It's a Draw!");
+		function getPlayerChoice(){
+			let playChoice =  prompt( 'rock , paper or scissors? ');
+			let playerChoice = playChoice.toLowerCase();
+			return (playerChoice);
 		}
 
+
+
+// GAME RULES 
+
+		function playRound(playerSelection, computerSelection){
+			computerSelection = getComputerChoice();
+			playerSelection   = getPlayerChoice();
+
+			if (computerSelection === 'rock' & playerSelection === 'paper') {
+				// console.log("You Won! Paper beats Rock");
+				return("You Won! Paper beats Rock");
+			}
+			else if (computerSelection === 'paper' & playerSelection === 'rock') {
+				// console.log("Youn Lost! Paper beats Rock");
+				return("Youn Lost! Paper beats Rock");
+			}
+			else if (computerSelection === 'rock' & playerSelection === 'scissors') {
+				// console.log("You Lost! Rock beats Scissors");
+				return("You Lost! Rock beats Scissors");
+			}
+			else if (computerSelection === 'scissors' & playerSelection === 'rock') {
+				// console.log("You Won! Rock beats Scissors");
+				return("You Won! Rock beats Scissors");
+			}
+			else if (computerSelection === 'scissors' & playerSelection === 'rock' ) {
+				// console.log("Youn Won! Rock beats Scissors");
+				return("Youn Won! Rock beats Scissors");
+			}
+			else if (computerSelection === 'paper' & playerSelection === 'scissors') {
+				// console.log("You Won! Scissors beats paper");
+				return("You Won! Scissors beats paper");
+			}
+			else if (computerSelection === 'scissors' & playerSelection === 'paper') {
+				// console.log("You Lost! Scissors beats paper.");
+				return("You Lost! Scissors beats paper.");
+			}
+			else(computerSelection === playerSelection)
+				// console.log("It's a Draw!");
+				return("It's a Draw!");
+			
+		}
+
+//PLAY FIVE ROUNDS OF GAME		
+
+		function game(){
+			
+			let playerWin = 0;
+			let computerWin =0;
+			
+
+			for (let i = 0; i < 5; i++) {	//Loop for five times
+
+				let a = playRound();       //Play the game
+
+
+										  //Checking the game results to pick a winner
+				if ( a === " You Won! Paper beats Rock" ||
+					 a === "You Won! Rock beats Scissors" || 
+					 a === "You Won! Scissors beats paper") {
+
+					 playerWin = playerWin + 1;
+
+				}
+				else if (a === "It's a Draw!" ){ 
+					playerWin = playerWin + 1;
+					computerWin = computerWin + 1;
+				}
+				else
+					computerWin = computerWin + 1;
+				
+			}
+				
+//DISPLAY FINAL SCORES
+			
+			console.log( playerWin );
+			console.log( computerWin);
+
+//CHECK FOR FINAL WINNER AND DISPLAY RESULTS
+
+			if (computerWin > playerWin) {
+				console.log('You lost! Computer Wins');
+				//return('You lost! Computer Wins');
+
+			}
+			else if (computerWin < playerWin) {
+				console.log('You Won! Play Again!!');
+				//return('You Won! Play Again!!');
+			}
+			else
+				console.log("It's a Draw!");
+				//return("It's a Draw!");
+		}
+
+			
 		
 		
 	</script>
