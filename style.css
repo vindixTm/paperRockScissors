@@ -1,0 +1,140 @@
+body{
+	background-color: #282825;
+}
+img{
+	width: 120px;
+	height: 120px;
+	background-color: #ffff;
+	background-blend-mode: multiply;
+}
+
+button{
+	width: 140px;
+	height: 140px;
+	background-color: #ffff;
+	border-style: solid;
+	border-radius: 15px;
+}
+
+.headerText,.finalText{
+	margin: 0px 0px 0px 90px;
+	
+	font-family: 'Gemunu Libre', sans-serif;
+	font-style: italic;
+	font-weight: 800;
+	font-size: 35px;
+	color: #ffff;
+}
+
+.header {
+	background-color: #282825;
+	position: initial;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	padding: 25px;
+	margin: -15px -15px 140px -15px;
+}
+
+.paper{
+	margin: 0px 100px 0px 100px;
+}
+
+.footer {
+	background-color: #54524B;
+	position: fixed;
+	margin: 0px -8px -8px -8px;
+	bottom: 0;
+  	left: 0;
+  	right: 0;
+  	padding: 60px;
+
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+.scores{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+}
+
+.player{
+	width: 231px;
+	height: 253px;
+	border: solid;
+	border-style: dotted;
+	border-radius: 15px;
+	margin: 0px 140px 0px 0px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	color: #ffff;
+	font-family: 'Gemunu Libre', sans-serif;
+	font-weight: 800;
+	font-size: 300px;
+}
+.computer{
+	width: 231px;
+	height: 253px;
+	border: solid;
+	border-style: dotted;
+	border-radius: 15px;
+
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	color: #ffff;
+	font-family: 'Gemunu Libre', sans-serif;
+	font-weight: 800;
+	font-size: 300px;
+	
+}
+
+
+.scoresLabels{
+	display: flex;
+	justify-content: center;
+
+
+	margin: 30px 0px 70px 0px;
+	color: #ffff;
+	font-family: 'Gemunu Libre', sans-serif;
+	font-weight: 800;
+	font-size: 25px;
+	font-style: italic;
+}
+.playerText{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	width: 231px;
+	height: 30px;
+	margin: 0px 140px 0px 0px;
+}
+.computerText{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	width: 231px;
+	height: 30px;
+	margin: 0px 0px 0px 0px;
+}
+
+
+.choiceBtns{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 140px;
+}
+
